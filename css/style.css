@@ -1,0 +1,1540 @@
+/* =========================================================
+   0) BASE / RESET (algemeen)
+   ========================================================= */
+   html{
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+    font-family: "Open Sans";
+    height: fit-content;
+    padding-bottom: 0;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  body{
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+    font-family: "Open Sans";
+    height: fit-content;
+    padding-bottom: 0;
+    padding-top: 110px;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  /* =========================================================
+     1) TYPOGRAFIE (h1, h3, p)
+     ========================================================= */
+  h1{
+    font-size: 30px;
+    margin-bottom: 2vh;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  
+  h3{
+    font-size: 20px;
+    margin-bottom: 2vh;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  
+  p{
+    font-size: 18px;
+    margin-bottom: 2vh;
+    line-height: 1.6;
+    font-weight: 200;
+    color: #444;
+
+  }
+  
+  
+  /* =========================================================
+     2) HEADER + NAV
+     ========================================================= */
+  header{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1vw;
+  
+    border-top: #ff6c2b solid 0.5vh;
+    padding: 1.5rem;
+    padding-right: 4vw;
+    margin-top: 0;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3000;
+  
+    font-family: "Open Sans";
+  }
+  
+  /* logo blok */
+  #logo{
+    justify-content: flex-start;
+    margin-left: 1.7vw;
+  }
+  
+  /* taal switch */
+  #taal{
+    text-decoration: none;
+    color: #ff6c2b;
+    font-weight: 700;
+    font-size: large;
+  }
+
+  /* mobile checkbox hamburger */
+  .menu-toggle{
+    display: none;
+  }
+
+  .submenu-toggle{
+    display: none;
+  }
+
+  .submenu-label{
+    display: none;
+  }
+
+  .hamburger{
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 12px;
+  }
+
+  .hamburger span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #555;
+    transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
+  }
+  
+  /* logo img */
+  header img{
+    justify-content: left;
+    width: 6vw;
+  }
+  
+  /* nav container */
+  header ul{
+    display: flex;
+    justify-content: flex-end;
+    width: 85%;
+  }
+  
+  /* alle nav links */
+  header ul li a{
+    color: #555;
+    text-decoration: none;
+    font-size: 16px;
+    justify-content: space-between;
+    white-space: nowrap; /* geen woordafbreking */
+  }
+  
+  /* nav list */
+  .nav-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    text-transform: uppercase;
+  }
+  
+  /* nav item voor dropdown */
+  .nav-item{
+    position: relative;
+  }
+  
+  /* hover kleur */
+  .nav-item > a:hover{
+    color: #ff6c2b;
+  }
+
+  .nav-links a.active,
+.nav-item.active > a{
+  color: #ff6c2b;
+  font-weight: 600;
+}
+
+  .site-search{
+    position: relative;
+  }
+  
+  .search-results-box{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: #f7f7f7;
+    list-style: none;
+    width: fit-content;
+    min-width: 260px;
+    padding: 8px 0;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-bottom: 4px solid #ff6c2b;
+
+    display: none;
+    flex-direction: column;
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 2000;
+  }
+  
+  .search-result-link{
+    padding: 10px 25px 15px 10px;
+    display: block;
+    color: #555;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    width: fit-content;
+  }
+  
+  .search-result-link:hover{
+    background: white;
+    color: #ff6c2b;
+    width: 100%;
+  }
+  
+  .search-result-link:last-child{
+    border-bottom: none;
+  }
+
+
+  .site-search input{
+    padding: 8px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: "Open Sans";
+    background: #ffffff;
+    min-width: 120px;
+    transition: border 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .site-search input::placeholder{
+    color: #999;
+  }
+
+  .site-search input:focus{
+    outline: none;
+    border-color: #ff6c2b;
+    box-shadow: 0 0 0 2px rgba(255,108,43,0.15);
+  }
+
+  .search-no-results{
+    padding: 12px 16px;
+    color: #666;
+    font-size: 15px;
+  }
+  
+  
+  /* =========================================================
+     3) DROPDOWN MENU
+     ========================================================= */
+  .dropdown-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+  
+    background: #f7f7f7;
+    list-style: none;
+    width: fit-content;
+    padding: 8px 0;
+  
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-bottom: 4px solid #ff6c2b;
+  
+    display: flex;
+    flex-direction: column;
+  
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+  }
+  
+  .dropdown-menu li a{
+    padding: 10px 25px 15px 10px;
+    display: block;
+    color: #555;
+  
+    text-transform: none;
+    font-size: 18px;
+  
+    transition: background 0.2s ease, color 0.2s ease;
+    width: fit-content;
+  }
+  
+  .dropdown-menu li a:hover{
+    background: white;
+    color: #ff6c2b;
+    width: 100%;
+  }
+  
+  /* show dropdown */
+  .dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .language-switch:hover .dropdown-menu,
+.language-switch:focus-within .dropdown-menu{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-switch{
+  width: auto;
+}
+
+.language-switch #taal{
+  display: inline-flex;
+  align-items: center;
+}
+  
+  
+  /* =========================================================
+     4) HERO SLIDER
+     ========================================================= */
+     .hero{
+      height: 80vh;
+      min-height: 520px;
+      width: 100%;
+      margin-top: -110px;
+    
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+    }
+  
+  /* slides */
+  .slide{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  
+    opacity: 0;
+    visibility: hidden;
+  
+    animation: fade 10s infinite;
+    padding-top: 15px;
+  }
+  
+  .slide img{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* timing */
+  .s1{ animation-delay: 0s; }
+  .s2{ animation-delay: 5s; }
+  
+  /* fade animation */
+  @keyframes fade{
+    0%   { opacity: 0; visibility: hidden;}
+    8%   { opacity: 1; visibility: visible;}
+    42%  { opacity: 1; visibility: visible;}
+    50%  { opacity: 0; visibility: hidden;}
+    100% { opacity: 0; visibility: hidden;}
+  }
+  
+  /* hero overlay text */
+  .overlay{
+    position: absolute;
+  inset: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 26px;
+
+  text-align: left;
+  padding: 0 5vw 6vh;
+  box-sizing: border-box;
+  }
+  
+  .overlay h1{
+    color: #fff;
+  font-size: clamp(32px, 4vw, 58px);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.50);
+  max-width: 900px;
+  }
+  
+  
+  /* =========================================================
+     5) INTRO SECTION
+     ========================================================= */
+  .intro{
+    padding: 7vh 0;
+    background: #f5f5f5;
+    width: 100%;
+  }
+  
+  .intro-inner{
+    width: min(1100px, 90vw);
+    margin: 0 auto;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  
+  .intro p{
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+  }
+  
+  .highlight{
+    color: #ff6c2b;
+    font-weight: 600;
+  }
+  
+  .intro-button{
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  /* CTA button */
+  .cta-main{
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  
+    background: #ff6c2b;
+    color: white;
+    padding: 18px 32px;
+    text-decoration: none;
+  
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+  
+  .cta-main:hover{
+    background: #d94e1e;
+  }
+  
+  .arrow{
+    transition: transform 0.3s ease;
+  }
+  
+  .cta-main:hover .arrow{
+    transform: translateX(5px);
+  }
+  
+  .hero-btn{
+    margin-top: 30px;
+    width: fit-content;
+  }
+
+  .why-cfire{
+    padding: 7vh 0;
+    }
+    
+    .why-intro{
+    width: min(1100px,90vw);
+    margin: 0 auto 50px auto;
+    text-align: center;
+    }
+    
+    .why-grid{
+      width: min(1100px, 90vw);
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 40px;
+      align-items: stretch;
+    }
+    
+    .why-card{
+      background: #ffffff;
+      padding: 30px;
+      border: 1px solid #e6e6e6;
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .why-card h3,
+    .why-card p{
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+.why-card p{
+  margin-bottom: 0;
+}
+    
+    .why-card h3{
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    .why-cta{
+    margin-top: 50px;
+    text-align: center;
+    }
+  
+  
+  /* =========================================================
+     6) PRODUCT SECTIONS + GRIDS
+     ========================================================= */
+  .product-section{
+    padding: 5vh 10vw 10vw;
+    background: #f5f5f5;
+    height: fit-content; /* als dit random whitespace geeft: beter weghalen */
+  }
+  
+  /* page specifieke wrappers */
+  #blussers{ height: fit-content; 
+  }
+  #sprays{
+    grid-template-columns: repeat(2, 1fr);
+    height: fit-content;
+  }
+  #BIOLINE{
+    grid-template-columns: repeat(1, 1fr);
+    height: fit-content;
+  }
+  #additieven{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    height: fit-content;
+  }
+  #detectoren{ height: fit-content; }
+  #onderhoud{
+    height: fit-content;
+    padding-top: 3vh;
+  }
+  #assortiment{
+    height: fit-content;
+    padding-top: 3vh;
+  }
+
+  #contact p{
+    line-height: 0.1;
+  }
+  
+  /* extra info */
+  #meer-info{
+    margin-top: 5vh;
+  }
+  #meer-info p{
+    line-height: 1.6;
+  }
+
+  #CO2{
+    height: fit-content;
+  }
+
+  #schuim{
+    height: fit-content;
+    padding-bottom: 2vh;
+    margin-bottom: -3vh;
+  }
+
+  #schuim h3{
+    margin-bottom: -4vh;
+  }
+
+  #schuim .product-grid{
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+  #poeder{
+    height: fit-content;
+    padding-bottom: 2vh;
+    margin-bottom: -3vh;
+  }
+
+  #CO2 .product-grid{
+    grid-template-columns: repeat(4, 1fr);
+
+  }
+  
+  /* grid cards */
+  .product-grid{
+    width: 100%;
+    margin: 60px auto 2vh;
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  
+  /* card */
+  .product-card{
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .product-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+  
+  /* image area */
+  .product-image{
+    background: #f1f1f1;
+    aspect-ratio: 16/9;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* img inside */
+  .product-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* content */
+  .product-content{
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+    align-items: flex-start;
+  }
+  
+  .product-content h1{
+    margin-bottom: 20px;
+  }
+
+  .product-content .card-btn{
+    margin-top: auto;
+  }
+  
+  /* card button */
+  .card-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  
+    background: #ff6c2b;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+  
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    width: fit-content;
+  }
+  
+  .card-btn:hover{
+    background: #d94e1e;
+  }
+  
+  .card-btn span{
+    transition: 0.3s ease;
+  }
+  
+  .card-btn:hover span{
+    transform: translateX(4px);
+  }
+
+  .page-buttons{
+    display: flex;
+    flex-direction: column;   /* zet ze onder elkaar */
+    gap: 15px;                /* ruimte ertussen */
+    margin-top: 30px;
+  }
+
+.promo-card{
+    width: 100%;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    margin: 40px auto 50px;
+    overflow: hidden;
+    align-items: stretch;
+  }
+  
+  .promo-image{
+    background: #f1f1f1;
+    min-height: 320px;
+  }
+  
+  .promo-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .promo-content{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+  }
+  
+  .promo-badge{
+    display: inline-block;
+    width: fit-content;
+    background: #ff6c2b;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 8px 14px;
+  }
+  
+  .promo-content h2{
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .promo-content p{
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 52ch;
+  }
+  
+  
+  /* =========================================================
+   7) FOOTER
+   ========================================================= */
+.site-footer{
+  background: #3f3f3f;
+  padding: 6vh 0 0;
+  margin-top: 8vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.footer-inner{
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-col{
+  min-width: 0;
+}
+
+.footer-logo{
+  width: 140px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-heading{
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.footer-text{
+  color: #c7c7c7;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.footer-brand-text{
+  max-width: 32ch;
+}
+
+.footer-contact a,
+.footer-nav a,
+.footer-legal a,
+.footer-text a{
+  color: #c7c7c7;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.8;
+  transition: color 0.2s ease;
+}
+
+.footer-nav,
+.footer-legal{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-contact a:hover,
+.footer-nav a:hover,
+.footer-legal a:hover,
+.footer-text a:hover{
+  color: #ffffff;
+}
+
+.footer-bottom{
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 18px 0 24px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p{
+  margin: 0;
+  color: #b5b5b5;
+  font-size: 13px;
+}
+  
+  
+  /* =========================================================
+     8) ABOUT PAGE: LIST (impact)
+     ========================================================= */
+  #impact{
+    list-style: none;
+    padding-left: 0;
+    margin: 25px 0;
+  }
+  
+  #impact li{
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+  
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+  }
+  
+  #impact li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+  
+    width: 6px;
+    height: 6px;
+    background-color: #ff6c2b;
+    border-radius: 50%;
+  }
+  
+  #impact li:hover::before{
+    transform: scale(1.3);
+    transition: 0.2s ease;
+  }
+
+/* list links hover (brand classes / recommendations) */
+#impact li a,
+.product-section li a{
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#impact li a:hover,
+.product-section li a:hover{
+  color: #ff6c2b;
+  text-decoration: none;
+}
+  
+  
+  /* =========================================================
+     9) ABOUT PAGE: BANNER
+     ========================================================= */
+     .about-banner{
+      position: relative;
+      width: 100%;
+      height: 65vh;
+      overflow: hidden;
+      margin-top: -110px;
+    }
+
+  #control{
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+  }
+  
+#control h1{
+  max-width: 55vw;
+}
+
+#control .about-banner-overlay{
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;   /* verticaal centreren */
+  align-items: flex-start;   /* links uitlijnen */
+
+  padding: 0 6vw;
+  padding-bottom: 5vh;
+  gap: 30px;
+}
+
+  .about-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .about-banner::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.15);
+  }
+  
+  .about-banner-overlay{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  
+    text-align: left;
+    padding: 0 6vw 5vh 6vw;
+  }
+  
+  .about-banner-overlay h1{
+    color: #fff;
+    font-size: clamp(26px, 3.2vw, 54px);
+    line-height: 1.15;
+    font-weight: 700;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.85);
+    margin: 0;
+  
+    /* fade-in */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeUp{
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* content onder banner */
+  .about-content{
+    width: min(1100px, 90vw);
+    margin: 0 auto;
+    padding: 6vh 0 8vh;
+  }
+  
+  #over{
+    height: fit-content;
+    padding-top: 3vh;
+    padding-bottom: 0;
+  }
+
+  .extinguisher-guide{
+    padding: 7vh 0;
+    background: #f5f5f5;
+  }
+  
+  .guide-intro{
+    width: min(1100px, 90vw);
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  
+  .guide-grid{
+    width: min(1100px, 90vw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+  }
+  
+  .guide-card{
+    background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: flex-start;
+  }
+
+  .guide-card .card-btn{
+    margin-top: 0;
+  align-self: flex-start;
+  }
+  
+  .guide-card h3{
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .guide-card p{
+    margin: 0;
+  }
+  .guide-card p:last-of-type{
+    margin-top: auto;
+    margin-bottom: 4px;
+  }
+  
+  .guide-recommendation{
+    color: #ff6c2b;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .guide-footer{
+    width: min(1100px, 90vw);
+    margin: 40px auto 0;
+    text-align: center;
+  }
+
+  .education-page{
+    padding: 7vh 0 8vh;
+    background: #f5f5f5;
+  }
+  
+  .education-intro,
+  .education-tips,
+  .education-cta{
+    width: min(1100px, 90vw);
+    margin: 0 auto 50px;
+  }
+  
+  .education-grid{
+    width: min(1100px, 90vw);
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+  }
+  
+  .education-card{
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  
+  .education-letter{
+    width: 48px;
+    height: 48px;
+    background: #ff6c2b;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .education-card h3{
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .education-card p{
+    margin: 0;
+  }
+
+  .education-card ul{
+  margin: 0;
+  padding-left: 18px;
+}
+  
+  .education-example{
+    color: #666;
+  }
+  
+  .education-solution{
+    margin-top: auto;
+    margin-bottom: 8px;
+    color: #ff6c2b;
+    font-weight: 600;
+  }
+  
+  .education-solution span{
+    display: block;
+    white-space: nowrap;
+  }
+  
+  .education-cta{
+    text-align: center;
+  }
+  
+  .education-cta p{
+    margin-bottom: 24px;
+  }
+  
+  
+  /* =========================================================
+     10) MEDIA QUERIES (responsive)
+     ========================================================= */
+  @media (max-width: 1000px){
+    .product-grid{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .guide-grid{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+  }
+  
+  @media (max-width: 600px){
+    .product-grid{
+      grid-template-columns: 1fr;
+    }
+.guide-grid{
+  grid-template-columns: 1fr;
+}
+
+  }
+  
+  @media (max-width: 900px){
+    .footer-inner{
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .footer-center,
+    .footer-links{
+      padding-top: 0;
+      justify-content: flex-start;
+    }
+    .footer-title{
+      font-size: 34px;
+    }
+  }
+  
+  /* jouw oude examen-block (laat staan als je hem nodig hebt) */
+  @media screen and (min-width: 768px){
+    #disciplines .card{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      color: #ffffff;
+    }
+    #disciplines .card .item{
+      max-width: 33%;
+    }
+    #hero p{
+      padding-right: 35vw;
+    }
+    #disciplines{
+      height: 70vh;
+    }
+
+  }
+
+  /* =========================================================
+     11) MOBILE HEADER / HAMBURGER (NO JS)
+     ========================================================= */
+  @media (max-width: 768px){
+    html{
+      width: 100%;
+    }
+    
+    body{
+      width: 100%;
+      padding-top: 84px;
+    }
+    header{
+      width: 100%;
+      padding: 1rem 1.2rem;
+      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      z-index: 3000;
+    }
+    #logo{
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: auto;
+      padding-left: 0;
+      min-width: 0;
+    }
+    header ul{
+      width: auto;
+      justify-content: flex-start;
+    }
+    header img{
+      width: auto;
+      height: 34px;
+    }
+    .site-search{
+      display: flex;
+      align-items: center;
+      margin: 0;
+      position: relative;
+      z-index: 1700;
+    }
+    .site-search input{
+      min-width: 88px;
+      width: 88px;
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+    .site-search .search-results-box{
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      left: auto;
+      min-width: 320px;
+      width: max-content;
+      max-width: 80vw;
+      z-index: 1800;
+      padding-left: 2vw;
+    }
+    .menu-toggle{
+      display: none;
+    }
+    .hamburger{
+      display: flex;
+      margin: 0;
+      justify-self: end;
+    }
+    #taal{
+      margin: 0;
+      width: auto;
+      font-size: 15px;
+    }
+    .language-switch{
+      margin: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .nav-links{
+      position: absolute;
+      top: calc(100% + 1px);
+      left: 0;
+      right: 0;
+      width: 100%;
+      margin: 0;
+      padding: 18px 1.2rem 22px;
+      background: #f7f7f7;
+      border-bottom: 4px solid #ff6c2b;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      box-sizing: border-box;
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      z-index: 1500;
+    }
+    .menu-toggle:checked ~ .nav-links{
+      display: flex;
+    }
+    .nav-item{
+      width: 100%;
+    }
+    .nav-item > a{
+      width: auto;
+      display: inline-block;
+      font-size: 15px;
+    }
+    .nav-links .nav-item.dropdown{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .nav-links .nav-item.dropdown > a{
+      display: inline-flex;
+      align-items: center;
+      width: auto;
+      flex: 0 1 auto;
+    }
+    .nav-item.language-switch > a{
+      display: none !important;
+    }
+    .dropdown-menu{
+      position: static;
+      width: 100%;
+      min-width: 0;
+      margin-top: 10px;
+      box-shadow: none;
+      border-bottom: none;
+      background: transparent;
+      padding: 0 0 0 12px;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      display: none;
+    }
+    .language-switch .dropdown-menu{
+      position: absolute;
+      top: calc(100% + 12px);
+      right: 0;
+      left: auto;
+      width: max-content;
+      min-width: 90px;
+      background: #f7f7f7;
+      border-bottom: 4px solid #ff6c2b;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 8px 12px;
+      z-index: 1600;
+    }
+    .dropdown-menu li a,
+    .search-result-link{
+      font-size: 16px;
+      padding: 8px 12px;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .dropdown-menu li{
+      width: 100%;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(1){
+      transform: translateY(7px) rotate(45deg);
+    }
+    .menu-toggle:checked + .hamburger span:nth-child(2){
+      opacity: 0;
+    }
+    .menu-toggle:checked + .hamburger span:nth-child(3){
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    .submenu-toggle{
+      display: none;
+    }
+    .nav-links .submenu-label{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      font-size: 0;
+      line-height: 0;
+      overflow: hidden;
+      color: transparent;
+    }
+
+    .language-switch .submenu-label{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      color: inherit;
+    }
+    
+    .language-switch .submenu-label::before{
+      content: "NL";
+      color: #ff6c2b;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .lang-en .language-switch .submenu-label::before{
+      content: "EN";
+    }
+
+    .lang-fr .language-switch .submenu-label::before{
+      content: "FR";
+    }
+
+    .nav-links .submenu-label::after{
+      content: "+";
+      color: #ff6c2b;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 700;
+    }
+    
+    .nav-links .submenu-toggle:checked + .submenu-label::after{
+      content: "−";
+    }
+    .submenu-toggle:checked ~ .dropdown-menu{
+      display: flex;
+    }
+    .nav-links .nav-item.dropdown .dropdown-menu{
+      flex-basis: 100%;
+      width: 100%;
+    }
+    .language-switch .submenu-toggle:checked ~ .dropdown-menu{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .language-switch:focus-within .dropdown-menu{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-grid,
+    #CO2 .product-grid,
+    #schuim .product-grid,
+    #sprays .product-grid,
+    #additieven .product-grid{
+      grid-template-columns: 1fr;
+    }
+
+    .promo-card{
+      grid-template-columns: 1fr;
+    }
+    
+    .promo-image{
+      min-height: 220px;
+    }
+    
+    .promo-content{
+      padding: 24px;
+    }
+    
+    .promo-content h2{
+      font-size: 28px;
+    }
+    
+    .promo-content p{
+      font-size: 16px;
+    }
+
+    .education-grid{
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width:900px){
+
+      .why-grid{
+      grid-template-columns: repeat(2,1fr);
+      }
+      
+      }
+      
+      @media (max-width:600px){
+      
+      .why-grid{
+      grid-template-columns: 1fr;
+      }
+      
+      }
+  }
+
+  .video-wrapper{
+    width: min(900px, 90vw);
+    margin: 60px auto;
+    aspect-ratio: 16 / 9;
+    background: black;
+    overflow: hidden;
+  }
+  
+  .video-wrapper iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+  }   
+
+  /* =========================================================
+   12) SCROLL REVEAL / FADE IN
+   ========================================================= */
+.reveal-item{
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-item.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1{ transition-delay: 0.08s; }
+.reveal-delay-2{ transition-delay: 0.16s; }
+.reveal-delay-3{ transition-delay: 0.24s; }
+.reveal-delay-4{ transition-delay: 0.32s; }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal-item,
+  .reveal-item.is-visible{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
