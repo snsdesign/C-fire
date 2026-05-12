@@ -89,34 +89,24 @@
       </div>
     </section>
 
-    <section id="assortiment" class="product-section">
+    <section id="contacts" class="product-section">
       <p>Heb je vragen of wil je een bestelling plaatsen? Contacteer ons en wij beantwoorden jouw aanvraag zo spoedig mogelijk.</p>
-      <div class="product-grid">
+      <div class="product-grid" >
     
         <article class="product-card">
           <div class="product-image">
             <img src="../images/c-fire.png" alt="CO2 blussers">
           </div>
           <div id="contact" class="product-content">
-            <h1>C-fire NV (factuuradres)</h1>
-            <p>Frank Van Dyckelaan 3</p>
+            <h1>C-fire NV</h1>
+            <p>Frank Van Dyckelaan 17</p>
             <p>B-9140 Temse</p>
             <p>+32 3 710 69 01</p>
             <p>info@c-fire.eu</p>
           </div>
         </article>
     
-        <article class="product-card">
-          <div class="product-image">
-            <img src="../images/c-fire.png" alt="Poederblussers">
-          </div>
-          <div id="contact" class="product-content">
-            <h1>Lever- en afhaaladres (BE)</h1>
-            <p>Frank Van Dyckelaan 17</p>
-            <p>B-9140 Temse</p>
-            <p></p>
-          </div>
-        </article>
+       
     
         <article class="product-card">
           <div class="product-image">
@@ -131,6 +121,60 @@
           </div>
         </article>
       </div>
+
+      <div class="contact-form-wrap">
+        <div class="contact-form-intro">
+          <h1>Vraag informatie of een offerte aan</h1>
+          <p>
+            Laat je gegevens achter en wij zorgen dat je aanvraag bij de juiste contactpersoon terechtkomt op basis van je postcode.
+          </p>
+        </div>
+
+        <form id="contact-routing-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="company">Bedrijfsnaam</label>
+              <input type="text" id="company" name="company" placeholder="Naam van je bedrijf" required>
+            </div>
+
+            <div class="form-field">
+              <label for="vat">BTW-nummer</label>
+              <input type="text" id="vat" name="vat" placeholder="BE0123.456.789" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Naam contactpersoon</label>
+              <input type="text" id="name" name="name" placeholder="Voornaam en naam" required>
+            </div>
+
+            <div class="form-field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="naam@bedrijf.be" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Telefoonnummer</label>
+              <input type="tel" id="phone" name="phone" placeholder="+32 ...">
+            </div>
+
+            <div class="form-field">
+              <label for="postcode">Postcode</label>
+              <input type="text" id="postcode" name="postcode" placeholder="Bijvoorbeeld 9140" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Bericht</label>
+            <textarea id="message" name="message" rows="6" placeholder="Vertel kort waarvoor je ons wil contacteren." required></textarea>
+          </div>
+
+          <button type="submit" class="card-btn contact-submit-btn">Verstuur aanvraag <span>→</span></button>
+        </form>
+      </div>
     </section>
 
     <footer class="site-footer">
@@ -138,7 +182,7 @@
         <div class="footer-col footer-brand">
           <img src="../images/C-fire_RGB_NEG.png" alt="C-Fire logo" class="footer-logo">
           <p class="footer-text footer-brand-text">
-            C-Fire ontwikkelt milieuvriendelijke brandveiligheidsoplossingen en biedt installatie, inspectie en onderhoud voor een breed scala aan brandbeveiligingssystemen.
+            C-fire ontwikkelt milieuvriendelijke brandveiligheidsoplossingen en biedt installatie, inspectie en onderhoud voor een breed scala aan brandbeveiligingssystemen.
           </p>
         </div>
     
@@ -176,8 +220,8 @@
       </div>
     </footer>
       
+      
       <script src="../js/search.js"></script>
 
 </body>
 </html>
-
