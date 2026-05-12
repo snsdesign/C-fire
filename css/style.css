@@ -598,6 +598,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
+
+  #contacts .product-grid{
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: none;
+    gap: 40px;
+  }
   
   /* card */
   .product-card{
@@ -1200,7 +1207,7 @@
   /* =========================================================
      11) MOBILE HEADER / HAMBURGER (NO JS)
      ========================================================= */
-  @media (max-width: 768px){
+  @media (max-width: 1024px){
     html{
       width: 100%;
     }
@@ -1448,12 +1455,22 @@
     }
 
     .product-grid,
-    #CO2 .product-grid,
-    #schuim .product-grid,
-    #sprays .product-grid,
-    #additieven .product-grid{
-      grid-template-columns: 1fr;
-    }
+
+#CO2 .product-grid,
+
+#schuim .product-grid,
+
+#sprays .product-grid,
+
+#additieven .product-grid,
+
+#contact .product-grid,
+
+#contacts .product-grid{
+
+  grid-template-columns: 1fr;
+
+}
 
     .promo-card{
       grid-template-columns: 1fr;
@@ -1536,5 +1553,109 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* =========================================================
+   13) CONTACT FORM CARD
+   ========================================================= */
+.contact-form-wrap{
+  width: 100%;
+  margin-top: 7vh;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  padding: 42px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.contact-form-intro{
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.contact-form-intro h1{
+  margin-bottom: 12px;
+}
+
+.contact-form-intro p{
+  margin-bottom: 0;
+  color: #444;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-row{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.form-field{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label{
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-field input,
+.form-field textarea{
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  background: #f7f7f7;
+  padding: 14px 16px;
+  font-family: "Open Sans";
+  font-size: 15px;
+  color: #444;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder{
+  color: #999;
+}
+
+.form-field input:focus,
+.form-field textarea:focus{
+  outline: none;
+  border-color: #ff6c2b;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255,108,43,0.12);
+}
+
+.form-field textarea{
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-submit-btn{
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.contact-submit-btn:hover{
+  background: #d94e1e;
+}
+
+@media (max-width: 768px){
+  .contact-form-wrap{
+    padding: 26px;
+    margin-top: 5vh;
+  }
+
+  .form-row{
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 }
