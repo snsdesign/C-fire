@@ -50,10 +50,10 @@
         <li class="nav-item"><a href="../FR/Entretien & réparation.html">Entretien & réparation</a></li>
 
         <li class="nav-item dropdown">
-          <a href="../FR/À propos de C-Fire.html">À propos de C-Fire</a>
+          <a href="../FR/À propos de C-Fire.html">À propos de C-fire</a>
 
           <input type="checkbox" id="submenu-over" class="submenu-toggle">
-          <label for="submenu-over" class="submenu-label">À propos de C-Fire</label>
+          <label for="submenu-over" class="submenu-label">À propos de C-fire</label>
 
           <ul class="dropdown-menu">
             <li><a href="../FR/À propos de Cordeel.html">Cordeel group</a></li>
@@ -83,22 +83,23 @@
      </header>
 
      <section class="about-banner">
-      <img src="../../images/contact.jpeg" alt="Milieuvriendelijke brandbestrijding bij C-fire">
+      <img src="../../images/contact.jpeg" alt="Solutions de lutte incendie écologiques chez C-Fire">
       <div class="about-banner-overlay">
         <h1>Contact</h1>
       </div>
     </section>
-
-    <section id="assortiment" class="product-section">
-      <p>Vous avez des questions ou souhaitez passer une commande ? Contactez-nous et nous traiterons votre demande dans les plus brefs délais.</p>
+    
+    <section id="contacts" class="product-section">
+      <p>Vous avez des questions ou souhaitez passer une commande ? Contactez-nous et nous répondrons à votre demande dans les plus brefs délais.</p>
+    
       <div class="product-grid">
     
         <article class="product-card">
           <div class="product-image">
-            <img src="../../images/c-fire.png" alt="CO2 blussers">
+            <img src="../../images/c-fire.png" alt="C-Fire Belgique">
           </div>
           <div id="contact" class="product-content">
-            <h1>C-fire NV</h1>
+            <h1>C-Fire NV</h1>
             <p>Frank Van Dyckelaan 17</p>
             <p>B-9140 Temse</p>
             <p>+32 3 710 69 01</p>
@@ -108,44 +109,85 @@
     
         <article class="product-card">
           <div class="product-image">
-            <img src="../../images/c-fire.png" alt="Poederblussers">
+            <img src="../../images/c-fire NL.png" alt="C-Fire Pays-Bas">
           </div>
           <div id="contact" class="product-content">
-            <h1>Adresse de livraison et d’enlèvement (BE)</h1>
-            <p>Frank Van Dyckelaan 17</p>
-            <p>B-9140 Temse</p>
-            <p></p>
-          </div>
-        </article>
-    
-        <article class="product-card">
-          <div class="product-image">
-            <img src="../../images/c-fire NL.png" alt="Schuimblussers">
-          </div>
-          <div id="contact" class="product-content">
-            <h1>C-fire Nederland BV</h1>
+            <h1>C-Fire Nederland BV</h1>
             <p>Klopperman 6</p>
             <p>2292 JD Wateringen</p>
             <p>info@c-fire.nl</p>
-            <p></p>
           </div>
         </article>
+      </div>
+    
+      <div class="contact-form-wrap">
+        <div class="contact-form-intro">
+          <h1>Demander des informations ou un devis</h1>
+          <p>
+            Laissez vos coordonnées et nous veillerons à ce que votre demande soit transmise à la bonne personne de contact sur base de votre code postal.
+          </p>
+        </div>
+    
+        <form id="contact-routing-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="company">Nom de l’entreprise</label>
+              <input type="text" id="company" name="company" placeholder="Nom de votre entreprise" required>
+            </div>
+    
+            <div class="form-field">
+              <label for="vat">Numéro de TVA</label>
+              <input type="text" id="vat" name="vat" placeholder="BE0123.456.789" required>
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Personne de contact</label>
+              <input type="text" id="name" name="name" placeholder="Prénom et nom" required>
+            </div>
+    
+            <div class="form-field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="nom@entreprise.com" required>
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Numéro de téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+32 ...">
+            </div>
+    
+            <div class="form-field">
+              <label for="postcode">Code postal</label>
+              <input type="text" id="postcode" name="postcode" placeholder="Par exemple 9140" required>
+            </div>
+          </div>
+    
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Expliquez brièvement pourquoi vous souhaitez nous contacter." required></textarea>
+          </div>
+    
+          <button type="submit" class="card-btn contact-submit-btn">Envoyer la demande <span>→</span></button>
+        </form>
       </div>
     </section>
 
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-col footer-brand">
-          <img src="../../images/C-fire_RGB_NEG.png" alt="C-Fire logo" class="footer-logo">
+          <img src="../../images/C-fire_RGB_NEG.png" alt="C-fire logo" class="footer-logo">
           <p class="footer-text footer-brand-text">
-            C-Fire développe des solutions de sécurité incendie respectueuses de l’environnement et assure l’installation, l’inspection et la maintenance d’une large gamme de systèmes de protection incendie.
+            C-fire développe des solutions de sécurité incendie respectueuses de l’environnement et assure l’installation, l’inspection et la maintenance d’une large gamme de systèmes de protection incendie.
           </p>
         </div>
     
         <div class="footer-col footer-contact">
           <h3 class="footer-heading">Contact</h3>
           <p class="footer-text">
-            C-Fire NV<br>
+            C-fire NV<br>
             Frank Van Dyckelaan 17<br>
             B-9140 Temse<br>
             <a href="tel:+3237106901">+32 3 710 69 01</a><br>
@@ -157,7 +199,7 @@
           <h3 class="footer-heading">Liens rapides</h3>
           <a href="../FR/Moyens de lutte contre l’incendie.html">Solutions de sécurité incendie</a>
           <a href="../FR/Entretien & réparation.html">Entretien et réparation</a>
-          <a href="../FR/À propos de C-Fire.html">À propos de C-Fire</a>
+          <a href="../FR/À propos de C-Fire.html">À propos de C-fire</a>
           <a href="../FR/Contact FR.html.html">Contact</a>
         </div>
     
@@ -171,7 +213,7 @@
       </div>
     
       <div class="footer-bottom">
-        <p>© C-Fire. Tous droits réservés.</p>
+        <p>© C-fire. Tous droits réservés.</p>
         <p>Fait partie du groupe Cordeel.</p>
       </div>
     </footer>
