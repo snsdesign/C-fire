@@ -84,23 +84,24 @@
      </header>
 
      <section class="about-banner">
-      <img src="../../images/contact.jpeg" alt="Milieuvriendelijke brandbestrijding bij C-fire">
+      <img src="../../images/contact.jpeg" alt="Eco-friendly fire safety solutions at C-Fire">
       <div class="about-banner-overlay">
         <h1>Contact</h1>
       </div>
     </section>
-
-    <section id="assortiment" class="product-section">
-      <p>Do you have any questions or would you like to place an order? Contact us and we will respond to your request as soon as possible.</p>
+    
+    <section id="contacts" class="product-section">
+      <p>Do you have questions or would you like to place an order? Contact us and we will respond to your request as soon as possible.</p>
+    
       <div class="product-grid">
     
         <article class="product-card">
           <div class="product-image">
-            <img src="../../images/c-fire.png" alt="CO2 blussers">
+            <img src="../../images/c-fire.png" alt="C-Fire Belgium">
           </div>
           <div id="contact" class="product-content">
-            <h1>C-fire NV (Billing adress)</h1>
-            <p>Frank Van Dyckelaan 3 </p>
+            <h1>C-Fire NV</h1>
+            <p>Frank Van Dyckelaan 17</p>
             <p>B-9140 Temse</p>
             <p>+32 3 710 69 01</p>
             <p>info@c-fire.eu</p>
@@ -109,56 +110,97 @@
     
         <article class="product-card">
           <div class="product-image">
-            <img src="../../images/c-fire.png" alt="Poederblussers">
+            <img src="../../images/c-fire NL.png" alt="C-Fire Netherlands">
           </div>
           <div id="contact" class="product-content">
-            <h1>Delivery and pickup address (BE)</h1>
-            <p>Frank Van Dyckelaan 17</p>
-            <p>B-9140 Temse</p>
-            <p></p>
-          </div>
-        </article>
-    
-        <article class="product-card">
-          <div class="product-image">
-            <img src="../../images/c-fire NL.png" alt="Schuimblussers">
-          </div>
-          <div id="contact" class="product-content">
-            <h1>C-fire Nederland BV</h1>
+            <h1>C-Fire Nederland BV</h1>
             <p>Klopperman 6</p>
             <p>2292 JD Wateringen</p>
             <p>info@c-fire.nl</p>
-            <p></p>
           </div>
         </article>
+      </div>
+    
+      <div class="contact-form-wrap">
+        <div class="contact-form-intro">
+          <h1>Request information or a quote</h1>
+          <p>
+            Leave your details and we will make sure your request reaches the right contact person based on your postcode.
+          </p>
+        </div>
+    
+        <form id="contact-routing-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="company">Company name</label>
+              <input type="text" id="company" name="company" placeholder="Your company name" required>
+            </div>
+    
+            <div class="form-field">
+              <label for="vat">VAT number</label>
+              <input type="text" id="vat" name="vat" placeholder="BE0123.456.789" required>
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Contact person</label>
+              <input type="text" id="name" name="name" placeholder="First and last name" required>
+            </div>
+    
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="name@company.com" required>
+            </div>
+          </div>
+    
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+32 ...">
+            </div>
+    
+            <div class="form-field">
+              <label for="postcode">Postal code</label>
+              <input type="text" id="postcode" name="postal code" placeholder="For example 9140" required>
+            </div>
+          </div>
+    
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Briefly tell us why you would like to contact us." required></textarea>
+          </div>
+    
+          <button type="submit" class="card-btn contact-submit-btn">Send request <span>→</span></button>
+        </form>
       </div>
     </section>
 
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-col footer-brand">
-          <img src="../../images/C-fire_RGB_NEG.png" alt="C-Fire logo" class="footer-logo">
+          <img src="../../images/C-fire_RGB_NEG.png" alt="C-fire logo" class="footer-logo">
           <p class="footer-text footer-brand-text">
-            C-Fire develops environmentally friendly fire safety solutions and provides installation, inspection and maintenance for a wide range of fire protection systems.
+            C-fire develops environmentally friendly fire safety solutions and provides installation, inspection and maintenance for a wide range of fire protection systems.
           </p>
         </div>
     
         <div class="footer-col footer-contact">
           <h3 class="footer-heading">Contact</h3>
           <p class="footer-text">
-            C-Fire NV<br>
+            C-fire NV<br>
             Frank Van Dyckelaan 17<br>
             B-9140 Temse<br>
             <a href="tel:+3237106901">+32 3 710 69 01</a><br>
             <a href="mailto:info@c-fire.eu">info@c-fire.eu</a>
           </p>
-        </div>
+        </div> 
     
         <div class="footer-col footer-nav">
           <h3 class="footer-heading">Quick links</h3>
           <a href="../EN/Fire safety solutions.html">Fire safety solutions</a>
           <a href="../EN/maintenance and repair.html">Maintenance & repair</a>
-          <a href="../EN/About C-fire.html">About C-Fire</a>
+          <a href="../EN/About C-fire.html">About C-fire</a>
           <a href="../EN/Contact EN.html">Contact</a>
         </div>
     
@@ -172,7 +214,7 @@
       </div>
     
       <div class="footer-bottom">
-        <p>© C-Fire. All rights reserved.</p>
+        <p>© C-fire. All rights reserved.</p>
         <p>Part of Cordeel Group.</p>
       </div>
     </footer>
