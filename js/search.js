@@ -1,3 +1,19 @@
+// Add language class for mobile language selector
+(function setPageLanguageClass(){
+  const path = window.location.pathname.toLowerCase();
+  const root = document.documentElement;
+
+  root.classList.remove("lang-nl", "lang-en", "lang-fr");
+
+  if (path.includes("/fr/")) {
+    root.classList.add("lang-fr");
+  } else if (path.includes("/en/")) {
+    root.classList.add("lang-en");
+  } else {
+    root.classList.add("lang-nl");
+  }
+})();
+
 const searchInput = document.getElementById("site-search-input");
 const searchForm = document.querySelector(".site-search");
 
@@ -942,3 +958,6 @@ if (revealTargets.length) {
 
   revealTargets.forEach((item) => revealObserver.observe(item));
 }
+
+
+
