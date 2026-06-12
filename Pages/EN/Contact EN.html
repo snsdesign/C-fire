@@ -129,7 +129,7 @@
           </p>
         </div>
     
-        <form id="contact-routing-form" class="contact-form">
+        <form id="contact-routing-form" class="contact-form" action="#" method="post">
           <div class="form-row">
             <div class="form-field">
               <label for="company">Company name</label>
@@ -172,6 +172,12 @@
           </div>
     
           <button type="submit" class="card-btn contact-submit-btn">Send request <span>→</span></button>
+
+          <p id="form-success" class="form-success">
+
+            Your request has been sent successfully. We will contact you as soon as possible.
+          
+          </p>
         </form>
       </div>
     </section>
@@ -221,6 +227,20 @@
 
       <script src="../../js/search.js"></script>
 
+      <script>
+        const contactFormEN = document.getElementById("contact-routing-form");
+        const formSuccessEN = document.getElementById("form-success");
+
+        if (contactFormEN && formSuccessEN) {
+          contactFormEN.addEventListener("submit", function(event) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            formSuccessEN.style.display = "block";
+            contactFormEN.reset();
+          }, true);
+        }
+      </script>
+
 </body>
 </html>
-
