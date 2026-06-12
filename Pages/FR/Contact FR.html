@@ -98,7 +98,7 @@
           <div class="product-image">
             <img src="../../images/c-fire.png" alt="C-Fire Belgique">
           </div>
-          <div id="contact" class="product-content">
+          <div class="product-content contact-details">
             <h1>C-Fire NV</h1>
             <p>Frank Van Dyckelaan 17</p>
             <p>B-9140 Temse</p>
@@ -111,7 +111,7 @@
           <div class="product-image">
             <img src="../../images/c-fire NL.png" alt="C-Fire Pays-Bas">
           </div>
-          <div id="contact" class="product-content">
+          <div class="product-content contact-details">
             <h1>C-Fire Nederland BV</h1>
             <p>Klopperman 6</p>
             <p>2292 JD Wateringen</p>
@@ -128,7 +128,7 @@
           </p>
         </div>
     
-        <form id="contact-routing-form" class="contact-form">
+        <form id="contact-routing-form" class="contact-form" action="#" method="post">
           <div class="form-row">
             <div class="form-field">
               <label for="company">Nom de l’entreprise</label>
@@ -171,6 +171,12 @@
           </div>
     
           <button type="submit" class="card-btn contact-submit-btn">Envoyer la demande <span>→</span></button>
+
+          <p id="form-success" class="form-success">
+
+            Votre demande a été envoyée avec succès. Nous vous contacterons dans les plus brefs délais.
+          
+          </p>
         </form>
       </div>
     </section>
@@ -219,6 +225,21 @@
     </footer>
 
       <script src="../../js/search.js"></script>
+
+      <script>
+        const contactFormFR = document.getElementById("contact-routing-form");
+        const formSuccessFR = document.getElementById("form-success");
+
+        if (contactFormFR && formSuccessFR) {
+          contactFormFR.addEventListener("submit", function(event) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            formSuccessFR.style.display = "block";
+            contactFormFR.reset();
+          }, true);
+        }
+      </script>
 
 </body>
 </html>
