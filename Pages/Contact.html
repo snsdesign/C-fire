@@ -173,6 +173,12 @@
           </div>
 
           <button type="submit" class="card-btn contact-submit-btn">Verstuur aanvraag <span>→</span></button>
+
+          <p id="form-success" class="form-success">
+
+            Je aanvraag werd succesvol verzonden. We nemen zo snel mogelijk contact met je op.
+          
+          </p>
         </form>
       </div>
     </section>
@@ -221,6 +227,19 @@
     </footer>
       
       
+      <script>
+        const contactForm = document.getElementById("contact-routing-form");
+        const formSuccess = document.getElementById("form-success");
+
+        if (contactForm && formSuccess) {
+          contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            formSuccess.style.display = "block";
+            contactForm.reset();
+          });
+        }
+      </script>
       <script src="../js/search.js"></script>
 
 </body>
