@@ -1648,6 +1648,24 @@
   background: #d94e1e;
 }
 
+.form-success{
+
+  display: none;
+
+  margin-top: 18px;
+
+  padding: 16px 18px;
+
+  background: #f2fff4;
+
+  border: 1px solid #b7e8c0;
+
+  color: #2f7a3d;
+
+  font-weight: 500;
+
+}
+
 @media (max-width: 768px){
   .contact-form-wrap{
     padding: 26px;
@@ -1657,5 +1675,140 @@
   .form-row{
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+}
+/* =========================================================
+   14) MOBILE READABILITY FIX
+   ========================================================= */
+@media (max-width: 600px){
+  body{
+    padding-top: 78px;
+  }
+
+  h1{
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  h3{
+    font-size: 21px;
+    line-height: 1.35;
+  }
+
+  p{
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  header{
+    padding: 12px 10px;
+    grid-template-columns: 1fr auto auto auto;
+    gap: 10px;
+  }
+
+  header img{
+    height: 40px;
+  }
+
+  .hamburger span{
+    width: 28px;
+    height: 2.5px;
+  }
+
+  .site-search input{
+    width: 108px;
+    min-width: 108px;
+    height: 36px;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  #taal,
+  .language-switch .submenu-label::before{
+    font-size: 16px;
+  }
+
+  .hero{
+    height: calc(100svh - 78px);
+    min-height: 620px;
+    margin-top: -78px;
+  }
+
+  .slide,
+  .slide img{
+    height: 100%;
+  }
+
+  .overlay{
+    padding: 0 8vw 10vh;
+    gap: 22px;
+  }
+
+  .overlay h1{
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.15;
+    max-width: 92vw;
+  }
+
+  .cta-main,
+  .card-btn{
+    min-height: 48px;
+    padding: 14px 22px;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+
+  .hero-btn{
+    margin-top: 10px;
+  }
+
+  .intro,
+  .why-cfire,
+  .extinguisher-guide,
+  .education-page{
+    padding: 6vh 0;
+  }
+
+  .intro-inner{
+    grid-template-columns: 1fr;
+    gap: 28px;
+    width: 86vw;
+  }
+
+  .product-section{
+    padding: 5vh 7vw 10vh;
+  }
+
+  .product-grid,
+  .guide-grid,
+  .education-grid{
+    gap: 28px;
+    margin-top: 36px;
+  }
+
+  .product-content,
+  .guide-card,
+  .education-card{
+    padding: 26px;
+  }
+
+  .product-content h1{
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .about-banner{
+    height: 42vh;
+    min-height: 280px;
+    margin-top: -78px;
+  }
+
+  .about-banner-overlay{
+    padding: 0 8vw 5vh;
+  }
+
+  .about-banner-overlay h1{
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.12;
   }
 }
